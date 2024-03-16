@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Login Container */
+.login-container {
+    padding: 40px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #fff, /* White glow */
+                0 0 20px #fff, /* White glow */
+                0 0 40px #f0f, /* Magenta glow */
+                0 0 80px #0ff; /* Cyan glow */
+    position: relative;
+    z-index: 1;
+    animation: appear 0.5s ease-out forwards, neonRainbow 8s linear infinite;
+}
+
+/* Animation for container to appear */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Neon rainbow animation */
+@keyframes neonRainbow {
+    0%   {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #f00, 0 0 80px #f00;} /* Red */
+    14%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #f90, 0 0 80px #f90;} /* Orange */
+    28%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #ff0, 0 0 80px #ff0;} /* Yellow */
+    42%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #0f0, 0 0 80px #0f0;} /* Green */
+    57%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #00f, 0 0 80px #00f;} /* Blue */
+    71%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #90f, 0 0 80px #90f;} /* Indigo */
+    85%  {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #f0f, 0 0 80px #f0f;} /* Violet */
+    100% {box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px #f00, 0 0 80px #f00;} /* Red */
+}
+
+/* Login Form Styling */
+.login-form input,
+.login-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #333;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus, .login-form button:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 8px #3498db;
+}
+
+.login-form button {
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-form button:active {
+    background-color: #3498db;
+    transform: scale(0.98);
+}
+
+.mars{
+            position: absolute;
+            border-style: solid;
+            border-color: white;
+            border-radius: 50%;
+            width: 25em;
+            height: 25em;
+            animation: ansari 8s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: #00f;
+            border-right: #f00;
+            box-shadow:0 0 10px#ff0;
+}
+
+
+@keyframes ansari{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        h1{
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+            background-image: url(../../components/login_form/image/pin.gif);
+            
+            color: transparent;
+            background-clip: text;
+            position: absolute;
+            left: 40%;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="mars">
+    </div>
+    <h1>SHAHABUDDIN <br>ANSARI</h1>
+</body>
+</html>
